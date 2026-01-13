@@ -1,0 +1,80 @@
+body { background: #121212; color: #e0e0e0; font-family: sans-serif; margin: 0; text-align: center; }
+.container { max-width: 450px; margin: auto; padding: 20px; }
+.juz-card { background: #1e1e1e; border-radius: 10px; border-left: 5px solid #d4af37; margin-bottom: 10px; }
+.juz-header { padding: 15px; display: flex; justify-content: space-between; cursor: pointer; font-weight: bold; }
+.surah-item { padding: 15px; border-bottom: 1px solid #333; text-align: left; }
+.surah-name { color: #d4af37; cursor: pointer; text-decoration: underline; font-size: 1.2rem; }
+.modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); display: none; align-items: center; justify-content: center; z-index: 1000; }
+.modal-content { width: 95%; height: 85vh; background: white; border-radius: 10px; position: relative; }
+.close-modal { position: absolute; top: -40px; right: 0; color: white; font-size: 30px; cursor: pointer; }
+iframe { width: 100%; height: 100%; border: none; }
+.back-btn { background: #d4af37; color: black; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+footer { padding: 20px; opacity: 0.5; font-size: 0.8rem; }
+
+/* Stili i ri për butonin Tick */
+.tick-btn {
+    background: transparent;
+    border: 2px solid #444;
+    color: #444;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+/* Kur surja është e përfunduar */
+.surah-item.completed {
+    background: rgba(39, 174, 96, 0.1);
+}
+
+.surah-item.completed .surah-name {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.surah-item.completed .tick-btn {
+    background: #27ae60;
+    border-color: #27ae60;
+    color: white;
+}
+
+.page-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #333;
+}
+
+.counter-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.count-val {
+    background: #333;
+    padding: 5px 12px;
+    border-radius: 5px;
+    min-width: 25px;
+    color: #d4af37;
+    font-weight: bold;
+}
+
+.btn-small {
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-plus { background: #27ae60; }
+.btn-minus { background: #c0392b; }

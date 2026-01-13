@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hifz Tracker - Abdurrahman Sako</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🕌 Hifz Tracker</h1>
+        <p>Abdurrahman Sako</p>
+    </header>
+
+    <div id="main-view" class="container">
+        <div class="juz-card">
+            <div class="juz-header" onclick="toggleJuz('juz27')"><span>Xhuzi 27</span><span>▼</span></div>
+            <div id="juz27" class="surah-list" style="display: block;"></div>
+        </div>
+    </div>
+
+    <div id="surah-detail-view" class="container" style="display: none;">
+        <button onclick="goBack()" class="back-btn">← Kthehu</button>
+        <h2 id="detail-surah-name" style="color: #d4af37; text-align: center;"></h2>
+        <div id="pages-container"></div>
+    </div>
+
+    <div id="mushaf-modal" class="modal" onclick="closeMushaf()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-modal" onclick="closeMushaf()">&times;</span>
+            <iframe id="mushaf-frame" src=""></iframe>
+        </div>
+    </div>
+
+    <footer><p>&copy; 2026 Abdurrahman Sako</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>
